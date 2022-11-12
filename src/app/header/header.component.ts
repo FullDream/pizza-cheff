@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { MenuLink } from './header.types';
 
 @Component({
   selector: 'app-header',
@@ -6,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  @Input() menuLinks: any[];
+  @Input() menuLinks!: MenuLink[];
 
   constructor() {}
 

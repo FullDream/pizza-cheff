@@ -1,16 +1,13 @@
-.title {
-  max-width: 100px;
-  font-family: Muller;
-  font-size: 24px;
-  font-weight: 900;
-  letter-spacing: 1.44px;
-  color: #f8c378;
-  text-transform: uppercase;
-}
-
 .header {
   padding: 15px 0;
   box-shadow: 0px 3px 13.8px 1.2px rgba(152, 152, 152, 0.2);
+
+  &__container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   &__logo {
     display: flex;
@@ -23,5 +20,32 @@
   &__img {
     width: 68px;
     height: 68px;
+  }
+
+  &__title {
+    max-width: 100px;
+    font-family: Muller;
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 1.44px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+  }
+}
+
+.menu {
+  display: flex;
+  list-style-type: none;
+  gap: 50px;
+  color: var(--secondary-color);
+  margin: 0;
+
+  &__link {
+    text-decoration: none;
+    color: currentColor;
+    transition: 0.3s all;
+    &:hover {
+      color: var(--primary-color);
+    }
   }
 }
