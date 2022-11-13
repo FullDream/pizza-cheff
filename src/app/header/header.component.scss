@@ -45,7 +45,7 @@
     color: var(--secondary-color);
     margin: 0;
 
-    @media (max-width: 769px) {
+    @media (max-width: 768px) {
       z-index: 100;
       position: fixed;
       flex-direction: column;
@@ -118,7 +118,7 @@
       }
     }
 
-    @media (max-width: 769px) {
+    @media (max-width: 768px) {
       display: block;
     }
   }

@@ -1,0 +1,11 @@
+<section class="products">
+  <div class="container">
+    <h2 class="products__title">Выберите свою любимую пиццу</h2>
+
+    <ul class="products__list">
+      <li class="products__item" *ngFor="let item of products">
+        <app-card [data]="item"></app-card>
+      </li>
+    </ul>
+  </div>
+</section>

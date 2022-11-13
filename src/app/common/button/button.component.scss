@@ -1,3 +1,7 @@
+:host {
+  width: 100%;
+}
+
 .button {
   padding: 22px 54px;
   background-color: var(--button-color);
@@ -17,6 +21,14 @@
 
   &:focus-visible {
     outline: var(--secondary-color) solid 2px;
+  }
+
+  &_fill {
+    width: 100%;
+  }
+
+  &_min {
+    padding: 17px 40px;
   }
 
   &_big {

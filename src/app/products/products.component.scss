@@ -1,0 +1,36 @@
+.products {
+  padding: 80px 0;
+
+  @media screen and (max-width: 576px) {
+    padding: 40px 0;
+  }
+
+  &__title {
+    font-size: 35px;
+    font-weight: bold;
+    line-height: 1.57;
+    color: var(--secondary-color);
+    text-align: center;
+
+    @media screen and (max-width: 768px) {
+      font-size: 25px;
+    }
+
+    @media screen and (max-width: 576px) {
+      font-size: 25px;
+    }
+  }
+
+  &__list {
+    margin-top: 59px;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 280px);
+    gap: 24px;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-top: 30px;
+  }
+}

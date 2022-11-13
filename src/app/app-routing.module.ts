@@ -5,7 +5,7 @@ const routes: Routes = [
   {
     path: '',
     loadComponent: () =>
-      import('./banner/banner.component').then((m) => m.BannerComponent),
+      import('./pages/home/home.component').then((m) => m.HomeComponent),
   },
 ];
 

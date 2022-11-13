@@ -9,6 +9,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./button.component.scss'],
 })
 export class ButtonComponent {
-  @Input() size: 'normal' | 'big' = 'big';
-  constructor() {}
+  @Input() fill: boolean = false;
+  @Input() size: 'normal' | 'big' | 'min' = 'normal';
 }

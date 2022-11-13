@@ -5,13 +5,13 @@
     padding: 80px 0 50px 0;
   }
 
-  @media (max-width: 769px) {
+  @media (max-width: 768px) {
     padding: 50px 0 30px 0;
   }
 
   &__container {
     display: grid;
-    grid-template-columns: 1fr 450px;
+    grid-template-columns: 1fr 520px;
     gap: 30px;
 
     @media (max-width: 1200px) {
