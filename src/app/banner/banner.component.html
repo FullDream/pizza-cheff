@@ -1,1 +1,29 @@
-<p>banner works!</p>
+<section class="banner">
+  <div class="container banner__container">
+    <div class="banner__content">
+      <h1 class="banner__title">
+        Самая вкусная пицца в мире
+        <span class="banner__subtitle">только в Pizza Cheff</span>
+      </h1>
+      <ul class="advantages banner__advantages">
+        <li *ngFor="let item of advantages" class="advantages__item">
+          <img
+            class="advantages__img"
+            [src]="item.img.src"
+            [alt]="item.img.alt"
+          />
+          <span class="advantages__title">{{ item.title }}</span>
+          <p class="advantages__text">{{ item.text }}</p>
+        </li>
+      </ul>
+    </div>
+    <img
+      src="assets/images/pizza-big.png"
+      srcset="
+        assets/images/pizza-big@2x.png 2x,
+        assets/images/pizza-big@3x.png 3x
+      "
+      class="banner__img"
+    />
+  </div>
+</section>
