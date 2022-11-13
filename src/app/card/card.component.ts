@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from '../common/button/button.component';
 import { CardProduct } from '../products/products.interface';
+import { LightBoxService } from '../common/light-box/light-box.service';
 
 @Component({
   selector: 'app-card',
@@ -12,4 +13,6 @@ import { CardProduct } from '../products/products.interface';
 })
 export class CardComponent {
   @Input() data!: CardProduct;
+
+  constructor(public readonly lightBoxService: LightBoxService) {}
 }

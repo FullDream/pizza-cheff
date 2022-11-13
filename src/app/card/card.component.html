@@ -1,5 +1,10 @@
 <div class="card">
-  <img class="card__img" [src]="data.img" alt="" />
+  <img
+    (click)="lightBoxService.open(data.img)"
+    class="card__img"
+    [src]="data.img"
+    alt=""
+  />
   <span class="card__title">{{ data.title }}</span>
   <p class="card__descr">{{ data.descr }}</p>
   <app-button [fill]="true" size="min">В корзину</app-button>
