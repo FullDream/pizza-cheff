@@ -6,10 +6,8 @@ import { MenuLink } from './header.types';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
+  isActive: boolean = false;
+
   @Input() menuLinks!: MenuLink[];
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }

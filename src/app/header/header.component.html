@@ -5,14 +5,24 @@
       <span class="header__title">Pizza Cheff</span>
     </a>
 
-    <nav>
-      <ul class="menu">
+    <nav class="menu">
+      <ul class="menu__list" [class.menu__list_active]="isActive">
         <li class="menu__item" *ngFor="let item of menuLinks">
           <a class="menu__link" [routerLink]="item.routerLink">
             {{ item.name }}
           </a>
         </li>
       </ul>
+
+      <button
+        (click)="isActive = !isActive"
+        class="menu__hamburger"
+        [class.menu__hamburger_active]="isActive"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </nav>
   </div>
 </header>

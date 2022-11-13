@@ -1,0 +1,24 @@
+.button {
+  padding: 22px 54px;
+  background-color: var(--button-color);
+  font-weight: bold;
+  border: none;
+  transition: 0.3s all;
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: var(--secondary-color) solid 2px;
+  }
+
+  &_big {
+  }
+}
