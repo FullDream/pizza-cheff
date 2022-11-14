@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LightBoxModule } from './common/components/light-box/light-box.module';
+import { ToastModule } from './common/components/toast/toast.module';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderModule } from './header/header.module';
 
@@ -16,6 +17,7 @@ import { HeaderModule } from './header/header.module';
     HeaderModule,
     LightBoxModule,
     FooterComponent,
+    ToastModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

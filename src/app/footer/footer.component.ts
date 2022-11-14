@@ -9,6 +9,7 @@ import {
 } from '@angular/forms';
 import { ValidationMessageComponent } from '../common/components/validation-message/validation-message.component';
 import { RestrictInputDirective } from '../common/directives/restrict-input.directive';
+import { ToastService } from '../common/components/toast';
 
 @Component({
   selector: 'app-footer',
@@ -29,6 +30,9 @@ export class FooterComponent {
     phone: new FormControl('', { validators: Validators.required }),
     address: new FormControl('', { validators: Validators.required }),
   });
+
+  constructor(public readonly toastService: ToastService) {}
+
   public get name() {
     return this.form.get('name');
   }
@@ -41,5 +45,10 @@ export class FooterComponent {
 
   public onSubmit() {
     console.log(this.form.value);
+    this.toastService.show(
+      'Ваша заявка успешно отправлена, с вами скоро свяжется наш менеджер'
+    );
+
+    this.form.reset();
   }
 }

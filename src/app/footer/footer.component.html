@@ -19,6 +19,7 @@
           class="form__input"
           appRestrictInput="[.]"
           formControlName="name"
+          name="name"
           type="text"
           placeholder="Ваше имя"
         />
@@ -28,6 +29,7 @@
         <input
           formControlName="address"
           class="form__input"
+          name="address"
           type="text"
           placeholder="Адрес доставки"
         />
@@ -36,17 +38,18 @@
       <div>
         <input
           formControlName="phone"
-          appRestrictInput="[A-z]"
+          appRestrictInput="[A-z, A-я]"
           class="form__input"
+          name="phone"
           type="tel"
           placeholder="Телефон"
         />
         <app-validation-message [control]="phone"></app-validation-message>
       </div>
 
-      <app-button [disabled]="form.invalid" [fill]="true"
-        >Оформить заказ</app-button
-      >
+      <app-button [disabled]="form.invalid" [fill]="true">
+        Оформить заказ
+      </app-button>
     </form>
     <img
       class="footer__img"
