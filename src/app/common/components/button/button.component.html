@@ -1,5 +1,6 @@
 <button
   class="button"
+  [disabled]="disabled"
   [ngClass]="{ button_fill: fill, button_min: size === 'min' }"
 >
   <ng-content></ng-content>

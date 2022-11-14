@@ -11,4 +11,5 @@ import { Component, Input } from '@angular/core';
 export class ButtonComponent {
   @Input() fill: boolean = false;
   @Input() size: 'normal' | 'big' | 'min' = 'normal';
+  @Input() disabled?: boolean;
 }

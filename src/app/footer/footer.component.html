@@ -1,0 +1,57 @@
+<footer class="footer">
+  <div class="container footer__container">
+    <div class="footer__content">
+      <h3 class="footer__title">
+        Хватит думать!
+        <span class="footer__subtitle">Доставим заказ за 30 минут!</span>
+      </h3>
+      <p class="footer__descr">
+        Мы гарантированно доставим вашу пиццу за 30 минут с момента оформления
+        заказа. Если мы опоздаем даже на 1 минуту - вы получаете весь заказ
+        бесплатно и ваучер на скидку на следующий заказ. Мы гордимся нашим
+        сервисом и сделаем всё, чтобы наш клиент был доволен и не остался
+        голодный!
+      </p>
+    </div>
+    <form class="form footer__form" [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div>
+        <input
+          class="form__input"
+          appRestrictInput="[.]"
+          formControlName="name"
+          type="text"
+          placeholder="Ваше имя"
+        />
+        <app-validation-message [control]="name"></app-validation-message>
+      </div>
+      <div>
+        <input
+          formControlName="address"
+          class="form__input"
+          type="text"
+          placeholder="Адрес доставки"
+        />
+        <app-validation-message [control]="address"></app-validation-message>
+      </div>
+      <div>
+        <input
+          formControlName="phone"
+          appRestrictInput="[A-z]"
+          class="form__input"
+          type="tel"
+          placeholder="Телефон"
+        />
+        <app-validation-message [control]="phone"></app-validation-message>
+      </div>
+
+      <app-button [disabled]="form.invalid" [fill]="true"
+        >Оформить заказ</app-button
+      >
+    </form>
+    <img
+      class="footer__img"
+      src="assets/images/pizzzzza.png"
+      alt="Кусочек пиццы"
+    />
+  </div>
+</footer>
